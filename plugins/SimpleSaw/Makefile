@@ -13,6 +13,8 @@ NAME = simplesaw
 # Files to build
 
 OBJS_DSP = \
+	WaveTableOsc.cpp.o \
+	WaveUtils.cpp.o \
 	PluginSimpleSaw.cpp.o
 
 # --------------------------------------------------------------

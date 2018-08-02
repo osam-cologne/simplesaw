@@ -19,6 +19,7 @@
 #define PLUGIN_SIMPLESAW_H
 
 #include "DistrhoPlugin.hpp"
+#include "WaveUtils.hpp"
 
 START_NAMESPACE_DISTRHO
 
@@ -27,7 +28,7 @@ START_NAMESPACE_DISTRHO
 class PluginSimpleSaw : public Plugin {
 public:
     enum Parameters {
-        paramVolume = 0,
+        paramFrequency = 0,
         paramCount
     };
 
@@ -99,7 +100,7 @@ protected:
 
 private:
     float    fParams[paramCount];
-    double   fSampleRate;
+    WaveTableOsc *osc;
 
     DISTRHO_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(PluginSimpleSaw)
 };
