@@ -88,7 +88,6 @@ void PluginSimpleSaw::setParameterValue(uint32_t index, float value) {
     switch (index) {
         case paramFrequency:
             osc->setFrequency(value / getSampleRate());
-            fParams[paramFrequency] = value;
             break;
     }
 }
